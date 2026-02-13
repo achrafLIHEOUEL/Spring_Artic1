@@ -15,9 +15,8 @@ public class Course {
     private String emplacement;
     private LocalDate dateCourse;
 
-    @ManyToOne
-    @JoinColumn(name = "championnat_id", nullable = false)
-    private Championnat championnat;
+    @ManyToMany(mappedBy = "course")
+    private List<Championnat> championnats;
 
     @OneToMany(mappedBy = "course")
     private List<Position> positions;

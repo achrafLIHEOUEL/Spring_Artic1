@@ -18,11 +18,18 @@ public class Championnat {
     private String libelleC;
     private Integer annee;
 
-    @ManyToOne
-    @JoinColumn(name = "detail_championnat_id", nullable = false)
-    private DetailChampionnat detailChampionnat;
 
-    @OneToMany(mappedBy = "championnat")
+
+    @ManyToMany
+    @JoinTable(
+            name = "championnat_course",
+            joinColumns = @JoinColumn(name = "championnat_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
     private List<Course> courses;
+
+    @OneToOne
+    @JoinColumn(name = "detail_championnat_id")
+    private DetailChampionnat detail;
 
 }
