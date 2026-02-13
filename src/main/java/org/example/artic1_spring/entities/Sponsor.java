@@ -1,4 +1,4 @@
-package entities;
+package org.example.artic1_spring.entities;
 
 import jakarta.persistence.*;
 

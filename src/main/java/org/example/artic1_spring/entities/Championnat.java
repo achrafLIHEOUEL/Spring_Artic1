@@ -1,4 +1,4 @@
-package entities;
+package org.example.artic1_spring.entities;
 
 
 import jakarta.persistence.*;
@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-public class Chompionnat {
+public class Championnat {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

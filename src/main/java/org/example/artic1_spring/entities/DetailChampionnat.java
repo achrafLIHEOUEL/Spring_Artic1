@@ -1,4 +1,4 @@
-package entities;
+package org.example.artic1_spring.entities;
 
 
 import jakarta.persistence.CascadeType;
@@ -14,6 +14,6 @@ public class DetailChampionnat {
     private String code;
     private String description;
 
-    @OneToMany(mappedBy = "DetailChampionnat", cascade = CascadeType.ALL)
-    private List<Chompionnat> championnats;
+    @OneToMany(mappedBy = "detailChampionnat", cascade = CascadeType.ALL)
+    private List<Championnat> championnats;
 }

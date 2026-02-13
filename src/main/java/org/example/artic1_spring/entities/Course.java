@@ -1,4 +1,4 @@
-package entities;
+package org.example.artic1_spring.entities;
 
 
 import jakarta.persistence.*;
@@ -17,7 +17,7 @@ public class Course {
 
     @ManyToOne
     @JoinColumn(name = "championnat_id", nullable = false)
-    private Chompionnat championnat;
+    private Championnat championnat;
 
     @OneToMany(mappedBy = "course")
     private List<Position> positions;

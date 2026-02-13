@@ -1,4 +1,4 @@
-package entities;
+package org.example.artic1_spring.entities;
 
 import jakarta.persistence.*;
 
@@ -16,5 +16,9 @@ public class Contrat {
     @ManyToOne
     @JoinColumn(name = "equipe_id", nullable = false)
     private Equipe equipe;
+
+    @ManyToOne
+    @JoinColumn(name = "sponsor_id")
+    private Sponsor sponsor;
 }
 
