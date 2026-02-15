@@ -15,7 +15,7 @@ public class Course {
     private String emplacement;
     private LocalDate dateCourse;
 
-    @ManyToMany(mappedBy = "course")
+    @ManyToMany(mappedBy = "courses")
     private List<Championnat> championnats;
 
     @OneToMany(mappedBy = "course")
