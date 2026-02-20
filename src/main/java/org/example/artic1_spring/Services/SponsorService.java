@@ -2,11 +2,15 @@ package org.example.artic1_spring.Services;
 
 import org.example.artic1_spring.Repository.SponsorRepository;
 import org.example.artic1_spring.entities.Sponsor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SponsorService implements ISponsorService {
 
+    @Autowired
     SponsorRepository sp;
 
     @Override
