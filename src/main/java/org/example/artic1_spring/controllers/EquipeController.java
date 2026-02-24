@@ -18,4 +18,24 @@ public class EquipeController {
     public Equipe ajouterEquipe(@RequestBody Equipe equipe) {
         return equipeService.ajouterEquipe(equipe);
     }
+
+    @PutMapping
+    public Equipe modifierEquipe(@RequestBody Equipe equipe) {
+        return equipeService.modifierEquipe(equipe);
+    }
+
+    @DeleteMapping("/{idEquipe}")
+    public void supprimerEquipe(@PathVariable Long idEquipe) {
+        equipeService.supprimerEquipe(idEquipe);
+    }
+
+    @GetMapping
+    public List<Equipe> listEquipes() {
+        return equipeService.listEquipes();
+    }
+
+    @GetMapping("/{idEquipe}")
+    public Equipe recupererEquipe(@PathVariable Long idEquipe) {
+        return equipeService.recupererEquipe(idEquipe);
+    }
 }
